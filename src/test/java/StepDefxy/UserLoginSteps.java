@@ -34,6 +34,10 @@ public class UserLoginSteps {
 		prefs.put("profile.password_manager_leak_detect", false);
 		 prefs.put("profile.credentials_enable_service",false);
 		options.setExperimentalOption("prefs", prefs);
+		options.addArguments("password-store=basic");              // use basic password store
+		options.addArguments("--disable-infobars");                // disable info bars
+		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
+		options.addArguments("--guest");
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		lp = new LoginPage(driver);
@@ -62,8 +66,6 @@ public class UserLoginSteps {
 		    Assert.assertEquals(actualTitle, expectedTitle, "Page title mismatch!");
 		   System.out.println(actualTitle);
 	}
-	
-
 	@When("user clicks on menu")
 	public void user_clicks_on_menu() {
 	    lp.openmenu();
@@ -73,10 +75,20 @@ public class UserLoginSteps {
 	public void click_on_logout() {
 	   lp.clicklogout();
 	}
-
 	@Then("close browser")
 	public void close_browser() {
 	    driver.close();
 	}
-	
+	@Then("user gets invalid login error messagem {string}")
+	public void user_gets_invalid_login_error_messagem(String ExpectedErrormessege) {
+	    String ActualErrormessege = lp.invalidcred();
+	    Assert.assertEquals(ActualErrormessege, ExpectedErrormessege, "Epic sadface: Username and password do not match any user in this service");
+		   System.out.println(ActualErrormessege);		  
+	}
+	@Then("user gets loginRequired error message as {string}")
+	public void user_gets_login_required_error_message_as(String ExpectedLoginRequired) {
+		String Actualloginreqmessege= lp.loginreqmessege();
+		Assert.assertEquals(Actualloginreqmessege, ExpectedLoginRequired, "Epic sadface: Username is required");
+		System.out.println(Actualloginreqmessege);
+	}	
 }

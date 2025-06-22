@@ -29,6 +29,13 @@ public class LoginPage {
 	@FindBy(id="logout_sidebar_link")
 	WebElement logoutbtn;
 	
+	@FindBy(xpath = "//h3[@data-test='error']") 
+	WebElement invalidcredmessege;
+	
+	@FindBy(tagName="h3")
+	WebElement loginreq;
+	
+	
 	public void setUserName(String user) {	
 		uname.sendKeys(user);	
 		}	
@@ -44,5 +51,12 @@ public class LoginPage {
 	public void clicklogout() {
 		logoutbtn.click();
 	}
-
+	
+	public String invalidcred() {
+		return invalidcredmessege.getText();
+	}
+    public String loginreqmessege() {
+    	return loginreq.getText();
+    }
+	
 }
