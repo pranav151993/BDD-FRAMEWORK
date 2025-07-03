@@ -5,6 +5,7 @@ Background:
 Given user launch chrome browser
 When user opens url "https://www.saucedemo.com/v1/"
 
+@sanity
 Scenario: Add new product to cart
 And user enters username as "standard_user" and password as "secret_sauce"
 And click on login
@@ -17,6 +18,7 @@ Then "DESCRIPTION" of product is visible
 And Description of product is "Sauce Labs Bolt T-Shirt"
 And close browser
 
+@regression
 Scenario: Remove product from cart
 And user enters username as "standard_user" and password as "secret_sauce"
 And click on login
@@ -27,6 +29,7 @@ And User clicks on Remove
 Then Description of product "Sauce Labs Bolt T-Shirt" should not visible
 And close browser
 
+@sanity @regression
 Scenario: place order of the product
 And user enters username as "standard_user" and password as "secret_sauce"
 And click on login
