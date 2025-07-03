@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jun 15 12:50:52 IST 2025</td>
+<td>Started on:</td><td>Sat Jun 28 19:32:31 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>50 seconds (50909 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1610 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with valid credentials", "User Login Functionality"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;user launch chrome browser&apos; is undefined.
-You can implement this step using the snippet(s) below:
+<td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remove product from cart", "Add Product to Cart"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User clicks on Remove&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
 
-@Given(&quot;user launch chrome browser&quot;)
-public void user_launch_chrome_browser() {
+@Then(&quot;User clicks on Remove&quot;)
+public void user_clicks_on_remove() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Description of product {string} should not visible&quot;)
+public void description_of_product_should_not_visible(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
 
-	at ✽.user launch chrome browser(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/login2.feature:4)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1174687658", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1174687658'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;user launch chrome browser&apos; is undefined.
-You can implement this step using the snippet(s) below:
+	at ✽.User clicks on Remove(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/PlaceOrder.feature:26)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1417413828", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1417413828'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User clicks on Remove&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
 
-@Given(&quot;user launch chrome browser&quot;)
-public void user_launch_chrome_browser() {
+@Then(&quot;User clicks on Remove&quot;)
+public void user_clicks_on_remove() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Description of product {string} should not visible&quot;)
+public void description_of_product_should_not_visible(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
 
-	at ✽.user launch chrome browser(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/login2.feature:4)
+	at ✽.User clicks on Remove(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/PlaceOrder.feature:26)
 </pre></div></td>
-<td>8</td>
-<td>TestRunnerxy.Runnerab@433defed</td></tr>
+<td>0</td>
+<td>TestRunnerxy.Runnerab@548a24a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add new product to cart", "Add Product to Cart"</td>
+<td></td>
+<td>0</td>
+<td>TestRunnerxy.Runnerab@548a24a</td></tr>
 </table><p>
 </body>
 </html>
