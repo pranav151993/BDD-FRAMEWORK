@@ -5,6 +5,7 @@ Background:
 Given user launch chrome browser
 When user opens url "https://www.saucedemo.com/v1/"
 
+@regression               
 Scenario: User login with valid credentials
 And user enters username as "standard_user" and password as "secret_sauce"
 And click on login
@@ -14,6 +15,7 @@ And click on logout
 Then Page Title should be "Swag Labs"
 And close browser
 
+@sanity
 Scenario: User login with invalid credentials
 And user enters username as "abc" and password as "xyz"
 And click on login

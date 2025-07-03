@@ -17,20 +17,57 @@ import org.testng.asserts.SoftAssert;
 
 import PageObject.LoginPage;
 import PageObject.ProductPage;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UserLoginSteps extends BaseClass {
-      
+      	 WebDriverWait wait ;
 
-	 WebDriverWait wait ;
-
-		
+      	                        //we can use @Before & @After hooks multiple times & provide executions sequence by using order
+      	 @Before (order=1)     //to run before each scenario...scenario hooks
+      	 public void setup() {
+      		 
+      		WebDriverManager.chromedriver().setup();
+      		
+      		ChromeOptions options = new ChromeOptions();
+    		Map<String, Object> prefs = new HashMap<>();
+    		prefs.put("credentials_enable_service", false);
+    		prefs.put("profile.password_manager_leak_detect", false);
+    		 prefs.put("profile.credentials_enable_service",false);
+    		options.setExperimentalOption("prefs", prefs);
+    		options.addArguments("password-store=basic");              // use basic password store
+    		options.addArguments("--disable-infobars");                // disable info bars
+    		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
+    		options.addArguments("--guest");     	
+      		driver = new ChromeDriver(options); 
+      	 }
+      	 @Before(order=0)  
+      	 public void setup2() {
+      		 System.out.println("this will execute 1st as per order sequence");
+      		 
+      	 }
+      	 
+      	 
+      	 
+      	 @AfterStep
+		public void afterstepdemo() {  
+			
+			System.out.println("this runs after each step..");  //step hooks
+		}
+      	 @BeforeStep
+		public void beforestepdemo() {
+			System.out.println("this runs before each step...");//step hooks
+		}
+      	 
 	@Given("user launch chrome browser")
 	public void user_launch_chrome_browser() {
-		WebDriverManager.chromedriver().setup();
+		
 		ChromeOptions options = new ChromeOptions();
 		Map<String, Object> prefs = new HashMap<>();
 		prefs.put("credentials_enable_service", false);
@@ -41,7 +78,7 @@ public class UserLoginSteps extends BaseClass {
 		options.addArguments("--disable-infobars");                // disable info bars
 		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
 		options.addArguments("--guest");
-		driver = new ChromeDriver(options);
+	
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		lp = new LoginPage(driver);
 		pp= new ProductPage(driver);
@@ -220,5 +257,16 @@ public class UserLoginSteps extends BaseClass {
 	   else {
 		   Assert.assertTrue(false);
 	   }	   
-	}	
+	}
+	                 //in case of @After execution order sequence is reverse means higher order will execute 1st
+	@After(order=1)  //to run after each scenario.....scenario hooks	
+	public void teardown() {
+		driver.quit();
+		System.out.println("this execute last due to lower order sequence");
+	}
+	@After (order=2)
+	public void teardown2() {
+		System.out.println("this  execute 1st due to higher order sequence");
+	}
+	
 }
