@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 03 22:49:31 IST 2025</td>
+<td>Started on:</td><td>Fri Jul 04 20:58:21 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>15 seconds (15783 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23499 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,32 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with invalid credentials", "User Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Epic sadface: Username and password do not match any user in this service expected [Epic sadface: Username and password do not match any user in this service1] but found [Epic sadface: Username and password do not match any user in this service]
+	at StepDefxy.UserLoginSteps.user_gets_invalid_login_error_messagem(UserLoginSteps.java:183)
+	at ✽.user gets invalid login error messagem &quot;Epic sadface: Username and password do not match any user in this service1&quot;(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/login2.feature:22)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace709931821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace709931821'><pre>java.lang.AssertionError: Epic sadface: Username and password do not match any user in this service expected [Epic sadface: Username and password do not match any user in this service1] but found [Epic sadface: Username and password do not match any user in this service]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at StepDefxy.UserLoginSteps.user_gets_invalid_login_error_messagem(UserLoginSteps.java:183)
+	at ✽.user gets invalid login error messagem &quot;Epic sadface: Username and password do not match any user in this service1&quot;(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/login2.feature:22)
+</pre></div></td>
+<td>4</td>
+<td>TestRunnerxy.Runnerab@7fd50002</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -78,13 +104,8 @@ function toggleAllBoxes() {
 <tr>
 <td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add new product to cart", "Add Product to Cart"</td>
 <td></td>
-<td>10</td>
-<td>TestRunnerxy.Runnerab@548a24a</td></tr>
-<tr>
-<td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with invalid credentials", "User Login Functionality"</td>
-<td></td>
-<td>4</td>
-<td>TestRunnerxy.Runnerab@548a24a</td></tr>
+<td>17</td>
+<td>TestRunnerxy.Runnerab@7fd50002</td></tr>
 </table><p>
 </body>
 </html>

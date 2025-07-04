@@ -2,29 +2,41 @@ package StepDefxy;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
-
 import PageObject.LoginPage;
 import PageObject.ProductPage;
+import Utilities.ReadConfig;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.LogManager;
 
 public class UserLoginSteps extends BaseClass {
       	 WebDriverWait wait ;
@@ -33,7 +45,45 @@ public class UserLoginSteps extends BaseClass {
       	 @Before (order=1)     //to run before each scenario...scenario hooks
       	 public void setup() {
       		 
-      		WebDriverManager.chromedriver().setup();
+      		  RF = new ReadConfig();
+      		     		  
+      		//initialise logger
+     		log = LogManager.getLogger("UserLoginSteps");
+      		 
+     		String browsername = RF.getBrowser();     		 
+     		//launch browser
+    		switch(browsername.toLowerCase())
+    		{
+    		case "chrome":
+    			WebDriverManager.chromedriver().setup();
+    			ChromeOptions options = new ChromeOptions();
+        		Map<String, Object> prefs = new HashMap<>();
+        		prefs.put("credentials_enable_service", false);
+        		prefs.put("profile.password_manager_leak_detect", false);
+        		 prefs.put("profile.credentials_enable_service",false);
+        		options.setExperimentalOption("prefs", prefs);
+        		options.addArguments("password-store=basic");              // use basic password store
+        		options.addArguments("--disable-infobars");                // disable info bars
+        		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
+        		options.addArguments("--guest");
+    			driver = new ChromeDriver();
+    			break;
+
+    		case "msedge":
+    			WebDriverManager.edgedriver().setup();
+    			driver = new EdgeDriver();
+    			break;
+
+    		case "firefox":
+    			WebDriverManager.firefoxdriver().setup();
+    			driver = new FirefoxDriver();
+    			break;
+    		default:
+    			driver = null;
+    			break;
+    		}
+   		
+      		/*WebDriverManager.chromedriver().setup();    //placed common scenarios in before hooks
       		
       		ChromeOptions options = new ChromeOptions();
     		Map<String, Object> prefs = new HashMap<>();
@@ -45,12 +95,15 @@ public class UserLoginSteps extends BaseClass {
     		options.addArguments("--disable-infobars");                // disable info bars
     		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
     		options.addArguments("--guest");     	
-      		driver = new ChromeDriver(options); 
+      		//driver = new ChromeDriver(options); 
+      		*/
+      		log.info("setup1 executed...."); // can give any messege
+      		     		
       	 }
-      	 @Before(order=0)  
+      	 @Before(order=2)  
       	 public void setup2() {
-      		 System.out.println("this will execute 1st as per order sequence");
-      		 
+      		 System.out.println("this will execute 2nd as per order sequence");
+      		log.info("setup2 executed....");
       	 }
       	 
       	 
@@ -82,23 +135,27 @@ public class UserLoginSteps extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		lp = new LoginPage(driver);
 		pp= new ProductPage(driver);
+		
+		log.info("user launched chrome browser");
 	}
 	
 	@When("user opens url {string}")
 	public void user_opens_url(String url) {
-	    driver.get(url);
+	    driver.get(url);	    
+	    log.info("url is opened by user");
 	}
 
 	@When("user enters username as {string} and password as {string}")
 	public void user_enters_username_as_and_password_as(String username, String password) {
 	   lp.setUserName(username);
 		lp.setpassword(password);
-		
+		log.info("user entered username& password");
 	}
 
 	@When("click on login")
 	public void click_on_login() {
 	   lp.clicklogin();
+	   log.info("user clicked login");
 	}
 
 	@Then("Page Title should be {string}")
@@ -138,11 +195,13 @@ public class UserLoginSteps extends BaseClass {
 	   String actualprodctname = pp.productName();
 	   if(actualprodctname.equals(expectedprodctname))
 	    {
-	    	Assert.assertTrue(true);	    	
+	    	Assert.assertTrue(true);
+	    	log.warn("Test passed-login feature: product name matched");
 	    }
 	    else
 	    {
-	    	Assert.assertTrue(false);		    	
+	    	Assert.assertTrue(false);	
+	    	log.warn("Test failed-login feature: product name not matched");
 	    }	
 	   System.out.println(actualprodctname);
 	}
@@ -258,15 +317,31 @@ public class UserLoginSteps extends BaseClass {
 		   Assert.assertTrue(false);
 	   }	   
 	}
+	
+	
 	                 //in case of @After execution order sequence is reverse means higher order will execute 1st
 	@After(order=1)  //to run after each scenario.....scenario hooks	
-	public void teardown() {
+	public void teardown(Scenario sc) throws IOException {
+		if (sc.isFailed()==true) {	 //to take screenshot when scenario failed	
+		System.out.println("this execute last due to lower order sequence");		
+		//screen shot
+		String filewithpath="H:\\pranavsoftwares\\SELENIUM\\ECLIPSE\\BDDc2\\Screenshot\\fullpage.png"	;	
+		//step1 convert Webdriverobject into TakeScreenshot interface
+		TakesScreenshot abcd = ((TakesScreenshot)driver);
+		//call getScreenshotAs method to create image file	WHICH is  STORED IN OBJECT src of file class	
+		File src = abcd.getScreenshotAs(OutputType.FILE);
+		//copy above file to destination with file name
+		File dest = new File(filewithpath);
+		//step3 copy image file to destination
+		FileUtils.copyFile(src, dest);
+		
+		}
 		driver.quit();
-		System.out.println("this execute last due to lower order sequence");
 	}
 	@After (order=2)
 	public void teardown2() {
 		System.out.println("this  execute 1st due to higher order sequence");
+	
 	}
 	
 }
