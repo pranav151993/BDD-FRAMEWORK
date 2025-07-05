@@ -133,6 +133,15 @@
       <suiteXmlFile>testng.xml</suiteXmlFile>
     </suiteXmlFiles>   
 					</configuration>
+					
+		<dependencies>
+        <dependency>
+          <groupId>org.apache.maven.surefire</groupId>
+          <artifactId>surefire-testng</artifactId>
+          <version>3.5.3</version>
+        </dependency>
+        <!-- Optional: exclude junit-platform to avoid auto-detection -->
+      </dependencies>
           
         </plugin>
         <plugin>
