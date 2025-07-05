@@ -19,7 +19,7 @@ And close browser
 Scenario: User login with invalid credentials
 And user enters username as "abc" and password as "xyz"
 And click on login
-Then user gets invalid login error messagem "Epic sadface: Username and password do not match any user in this service1"
+Then user gets invalid login error messagem "Epic sadface: Username and password do not match any user in this service"
 And close browser
 
 Scenario: User login without any credentials
