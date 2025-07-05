@@ -38,9 +38,16 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 
-public class UserLoginSteps extends BaseClass {
-      	 WebDriverWait wait ;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+
+public class UserLoginSteps extends BaseClass {
+      	 
+	
+	
+	WebDriverWait wait ;
       	                        //we can use @Before & @After hooks multiple times & provide executions sequence by using order
       	 @Before (order=1)     //to run before each scenario...scenario hooks
       	 public void setup() {
@@ -67,6 +74,15 @@ public class UserLoginSteps extends BaseClass {
         		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
         		options.addArguments("--guest");
     			driver = new ChromeDriver();
+    			
+    			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));   			
+    			new WebDriverWait(driver, Duration.ofSeconds(30))  //wait for page load
+        	    .until(d -> ((JavascriptExecutor) d)
+        	        .executeScript("return document.readyState")
+        	        .equals("complete")
+        	    );    			 
+    			driver.manage().window().maximize();  //maximise window
+    			
     			break;
 
     		case "msedge":
@@ -81,8 +97,7 @@ public class UserLoginSteps extends BaseClass {
     		default:
     			driver = null;
     			break;
-    		}
-   		
+    		}    		
       		/*WebDriverManager.chromedriver().setup();    //placed common scenarios in before hooks
       		
       		ChromeOptions options = new ChromeOptions();
@@ -132,7 +147,6 @@ public class UserLoginSteps extends BaseClass {
 		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
 		options.addArguments("--guest");
 	
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		lp = new LoginPage(driver);
 		pp= new ProductPage(driver);
 		
