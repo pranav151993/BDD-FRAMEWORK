@@ -6,8 +6,8 @@
       <class name="TestRunnerxy.Runnerab">
         <methods>
           <include name="setUpClass"/>
-          <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
         </methods>
       </class> <!-- TestRunnerxy.Runnerab -->
     </classes>

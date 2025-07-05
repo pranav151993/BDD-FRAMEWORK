@@ -1,3 +1,6 @@
+PageObject\ProductPage.class
 StepDefxy\UserLoginSteps.class
+Utilities\ReadConfig.class
 PageObject\LoginPage.class
 TestRunnerxy\Runnerab.class
+StepDefxy\BaseClass.class
