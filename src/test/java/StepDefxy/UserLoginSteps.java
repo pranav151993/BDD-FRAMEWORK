@@ -187,10 +187,8 @@ public class UserLoginSteps extends BaseClass {
 	public void click_on_logout() {
 	   lp.clicklogout();
 	}
-	@Then("close browser")
-	public void close_browser() {
-	    driver.close();
-	}
+	
+	
 	@Then("user gets invalid login error messagem {string}")
 	public void user_gets_invalid_login_error_messagem(String ExpectedErrormessege) {
 	    String ActualErrormessege = lp.invalidcred();

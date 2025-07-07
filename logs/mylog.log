@@ -267,3 +267,159 @@
 [INFO ] 2025-07-05 13:23:19.751 [main] UserLoginSteps - url is opened by user
 [INFO ] 2025-07-05 13:23:20.499 [main] UserLoginSteps - user entered username& password
 [INFO ] 2025-07-05 13:23:20.657 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-06 14:41:10.784 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-06 14:41:10.818 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-06 14:41:10.890 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-06 14:41:11.821 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-06 14:41:12.152 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-06 14:41:25.919 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-06 14:41:26.008 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-06 14:41:40.650 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-06 14:41:40.652 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-06 14:41:40.663 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-06 14:41:40.973 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-06 14:41:41.591 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-06 14:41:41.728 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-06 14:42:39.807 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-06 14:42:39.828 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-06 14:42:39.880 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-06 14:42:41.358 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-06 14:42:41.657 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-06 14:42:43.560 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-06 14:42:43.621 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-06 14:42:57.164 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-06 14:42:57.166 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-06 14:42:57.169 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-06 14:42:57.874 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-06 14:42:58.213 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-06 14:42:58.347 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-06 14:43:30.968 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-06 14:43:30.987 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-06 14:43:31.029 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-06 14:43:31.947 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-06 14:43:32.376 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-06 14:43:33.839 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-06 14:43:33.923 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-06 14:43:48.083 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-06 14:43:48.085 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-06 14:43:48.095 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-06 14:43:48.909 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-06 14:43:49.391 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-06 14:43:49.542 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 20:49:00.180 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:49:00.211 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:49:00.428 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:49:01.205 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:49:02.413 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:49:06.212 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 20:49:06.494 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 20:49:24.136 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:49:24.137 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:49:24.146 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:49:24.795 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:49:25.368 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:49:25.686 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 20:51:44.646 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:51:44.662 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:51:44.709 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:51:45.241 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:51:45.581 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:51:46.745 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 20:51:46.921 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 20:52:01.029 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:52:01.046 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:52:01.052 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:52:01.306 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:52:01.997 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:52:02.130 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 20:52:28.653 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:52:28.664 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:52:28.716 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:52:28.921 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:52:29.486 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:52:31.366 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 20:52:31.427 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 20:52:45.587 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:52:45.589 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:52:45.601 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:52:47.138 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:52:47.549 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:52:47.707 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 20:53:36.239 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:53:36.257 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:53:36.323 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:53:36.876 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:53:37.238 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:53:38.555 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 20:53:38.646 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 20:53:52.599 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:53:52.601 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:53:52.604 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:53:53.048 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:53:53.286 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:53:53.412 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 20:55:38.433 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:55:38.453 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:55:38.514 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:55:39.090 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:55:39.412 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:55:40.821 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 20:55:40.905 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 20:55:54.846 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:55:54.847 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:55:54.851 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:55:55.313 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:55:55.555 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:55:55.690 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 20:58:27.168 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:58:27.184 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:58:27.262 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:58:27.966 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:58:28.300 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:58:29.807 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 20:58:29.973 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 20:58:44.763 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 20:58:44.766 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 20:58:44.776 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 20:58:45.377 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 20:58:45.695 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 20:58:45.852 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 21:01:42.325 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 21:01:42.342 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 21:01:42.390 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 21:01:42.615 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 21:01:43.158 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 21:01:44.464 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 21:01:44.566 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 21:01:48.821 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 21:01:48.823 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 21:01:48.832 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 21:01:49.058 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 21:01:49.532 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 21:01:50.082 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 21:02:02.950 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 21:02:02.971 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 21:02:03.021 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 21:02:03.525 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 21:02:03.888 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 21:02:05.392 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 21:02:05.469 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 21:02:10.307 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 21:02:10.308 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 21:02:10.315 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 21:02:11.007 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 21:02:11.296 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 21:02:11.453 [main] UserLoginSteps - user clicked login
+[INFO ] 2025-07-07 21:02:29.552 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 21:02:29.559 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 21:02:29.592 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 21:02:30.062 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 21:02:30.339 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 21:02:32.195 [main] UserLoginSteps - user clicked login
+[WARN ] 2025-07-07 21:02:32.286 [main] UserLoginSteps - Test passed-login feature: product name matched
+[INFO ] 2025-07-07 21:02:36.432 [main] UserLoginSteps - setup1 executed....
+[INFO ] 2025-07-07 21:02:36.433 [main] UserLoginSteps - setup2 executed....
+[INFO ] 2025-07-07 21:02:36.436 [main] UserLoginSteps - user launched chrome browser
+[INFO ] 2025-07-07 21:02:36.930 [main] UserLoginSteps - url is opened by user
+[INFO ] 2025-07-07 21:02:37.183 [main] UserLoginSteps - user entered username& password
+[INFO ] 2025-07-07 21:02:37.303 [main] UserLoginSteps - user clicked login

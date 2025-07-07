@@ -11,7 +11,7 @@ import java.util.Properties;
 import org.apache.logging.log4j.*;
 public class BaseClass {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 	public LoginPage lp;
 	public ProductPage pp;
 	public static Logger log;
