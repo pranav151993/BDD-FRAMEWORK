@@ -22,7 +22,10 @@ import io.cucumber.testng.CucumberOptions;
 	    //tags = "@sanity and @regression",    // to run  scenarios tagged with both sanity & regression
 	      tags = "@sanity and not @regression",   //to run scenarios tagged only sanity 
 	    
-	    plugin = {"pretty", "html:target/cucumber-reports.html"}
+	   plugin = {"pretty", "html:target/cucumber-reports.html",  		
+	   	        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}//extent report
+	    
+	    
 	)
 
 public class Runnerab extends AbstractTestNGCucumberTests{

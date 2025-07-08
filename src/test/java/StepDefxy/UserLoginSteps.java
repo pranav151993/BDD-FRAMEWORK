@@ -98,20 +98,7 @@ public class UserLoginSteps extends BaseClass {
     			driver = null;
     			break;
     		}    		
-      		/*WebDriverManager.chromedriver().setup();    //placed common scenarios in before hooks
       		
-      		ChromeOptions options = new ChromeOptions();
-    		Map<String, Object> prefs = new HashMap<>();
-    		prefs.put("credentials_enable_service", false);
-    		prefs.put("profile.password_manager_leak_detect", false);
-    		 prefs.put("profile.credentials_enable_service",false);
-    		options.setExperimentalOption("prefs", prefs);
-    		options.addArguments("password-store=basic");              // use basic password store
-    		options.addArguments("--disable-infobars");                // disable info bars
-    		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
-    		options.addArguments("--guest");     	
-      		//driver = new ChromeDriver(options); 
-      		*/
       		log.info("setup1 executed...."); // can give any messege
       		     		
       	 }
@@ -136,17 +123,6 @@ public class UserLoginSteps extends BaseClass {
 	@Given("user launch chrome browser")
 	public void user_launch_chrome_browser() {
 		
-		ChromeOptions options = new ChromeOptions();
-		Map<String, Object> prefs = new HashMap<>();
-		prefs.put("credentials_enable_service", false);
-		prefs.put("profile.password_manager_leak_detect", false);
-		 prefs.put("profile.credentials_enable_service",false);
-		options.setExperimentalOption("prefs", prefs);
-		options.addArguments("password-store=basic");              // use basic password store
-		options.addArguments("--disable-infobars");                // disable info bars
-		options.addArguments("--reduce-security-for-testing");// suppress warning dialogs
-		options.addArguments("--guest");
-	
 		lp = new LoginPage(driver);
 		pp= new ProductPage(driver);
 		
@@ -332,7 +308,7 @@ public class UserLoginSteps extends BaseClass {
 	
 	
 	                 //in case of @After execution order sequence is reverse means higher order will execute 1st
-	@After(order=1)  //to run after each scenario.....scenario hooks	
+	//@After(order=1)  //to run after each scenario.....scenario hooks	
 	public void teardown(Scenario sc) throws IOException {
 		if (sc.isFailed()==true) {	 //to take screenshot when scenario failed	
 		System.out.println("this execute last due to lower order sequence");		
@@ -351,9 +327,14 @@ public class UserLoginSteps extends BaseClass {
 		driver.quit();
 	}
 	@After (order=2)
-	public void teardown2() {
-		System.out.println("this  execute 1st due to higher order sequence");
-	
-	}
+	public void addSSafterEachSteps(Scenario scenario) {
+			if (scenario.isFailed()) {		
+			TakesScreenshot takeScreenshot =  (TakesScreenshot) driver;
+			byte[] screenshot = takeScreenshot.getScreenshotAs(OutputType.BYTES);
+			//attach image file to report
+			scenario.attach(screenshot, "image/png",scenario.getName() );
+			}
+			System.out.println("this  execute 1st due to higher order sequence");
+		}
 	
 }

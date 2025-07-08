@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 07 21:02:25 IST 2025</td>
+<td>Started on:</td><td>Tue Jul 08 23:52:24 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16692 ms)</td>
+<tr><td>Total time:</td><td>27 seconds (27422 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,14 +77,84 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add new product to cart", "Add Product to Cart"</td>
-<td></td>
-<td>7</td>
-<td>TestRunnerxy.Runnerab@5c80cf32</td></tr>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;cart_desc_label&apos;]&quot;}
+  (Session info: chrome=138.0.7204.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a8e4fd6e8ce7f22dc130b9c8870b380a, findElement {using=xpath, value=//div[@class=&apos;cart_desc_label&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.97, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57822}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57822/devtoo..., se:cdpVersion: 138.0.7204.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a8e4fd6e8ce7f22dc130b9c8870b380a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.getText(Unknown Source)
+	at PageObject.ProductPage.descrpt(ProductPage.java:83)
+	at StepDefxy.UserLoginSteps.of_product_is_visible(UserLoginSteps.java:226)
+	at ✽.&quot;DESCRIPTION&quot; of product is visible(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/PlaceOrder.feature:17)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1759500919", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1759500919'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;cart_desc_label&apos;]&quot;}
+  (Session info: chrome=138.0.7204.97)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a8e4fd6e8ce7f22dc130b9c8870b380a, findElement {using=xpath, value=//div[@class=&apos;cart_desc_label&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.97, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57822}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57822/devtoo..., se:cdpVersion: 138.0.7204.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a8e4fd6e8ce7f22dc130b9c8870b380a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.getText(Unknown Source)
+	at PageObject.ProductPage.descrpt(ProductPage.java:83)
+	at StepDefxy.UserLoginSteps.of_product_is_visible(UserLoginSteps.java:226)
+	at ✽.&quot;DESCRIPTION&quot; of product is visible(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/PlaceOrder.feature:17)
+</pre></div></td>
+<td>20</td>
+<td>TestRunnerxy.Runnerab@5884a914</td></tr>
 <tr>
 <td title='TestRunnerxy.Runnerab.runScenario()'><b>runScenario</b><br>Test class: TestRunnerxy.Runnerab<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with invalid credentials", "User Login Functionality"</td>
-<td></td>
-<td>7</td>
-<td>TestRunnerxy.Runnerab@5c80cf32</td></tr>
+<td><div><pre>java.lang.AssertionError: Epic sadface: Username and password do not match any user in this service expected [Epic sadface: Username and password do not match any user in this service1] but found [Epic sadface: Username and password do not match any user in this service]
+	at StepDefxy.UserLoginSteps.user_gets_invalid_login_error_messagem(UserLoginSteps.java:171)
+	at ✽.user gets invalid login error messagem &quot;Epic sadface: Username and password do not match any user in this service1&quot;(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/login2.feature:22)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1777369261", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1777369261'><pre>java.lang.AssertionError: Epic sadface: Username and password do not match any user in this service expected [Epic sadface: Username and password do not match any user in this service1] but found [Epic sadface: Username and password do not match any user in this service]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at StepDefxy.UserLoginSteps.user_gets_invalid_login_error_messagem(UserLoginSteps.java:171)
+	at ✽.user gets invalid login error messagem &quot;Epic sadface: Username and password do not match any user in this service1&quot;(file:///H:/pranavsoftwares/SELENIUM/ECLIPSE/BDDc2/src/test/java/feature2/login2.feature:22)
+</pre></div></td>
+<td>5</td>
+<td>TestRunnerxy.Runnerab@5884a914</td></tr>
 </table><p>
 </body>
 </html>
